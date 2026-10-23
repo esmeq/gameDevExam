@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cwyg8tj1xfno1"]
+
+[node name="Login" type="Control" unique_id=1987309629]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=2059415425]
+layout_mode = 0
+offset_right = 154.0
+offset_bottom = 38.0
+
+[node name="LineEdit2" type="LineEdit" parent="." unique_id=1240857360]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 40.0
+offset_right = 156.0
+offset_bottom = 78.0
+
+[node name="Button" type="Button" parent="." unique_id=812637318]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 91.0
+offset_right = 112.0
+offset_bottom = 128.0

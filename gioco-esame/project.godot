@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="gioco esame"
+run/main_scene="uid://cyhu3xk2ldptt"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1154
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [physics]
 

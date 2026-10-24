@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://cyhu3xk2ldptt"]
+
+[ext_resource type="Script" uid="uid://ciim5q1ff75po" path="res://main_menu.gd" id="1_jix8l"]
+[ext_resource type="Texture2D" uid="uid://cbtfulfvpjw6j" path="res://pulsante start.png" id="2_glbon"]
+[ext_resource type="Texture2D" uid="uid://b3l0gmf5pvhki" path="res://addons/skybox_sampler/panoramas/12_moonlit_night.png" id="2_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://dnb5y0rp6yarh" path="res://pulsante settings.png" id="3_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://bfaokjh3jd8b0" path="res://pulsante exit.png" id="4_qe12f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kto4x"]
+texture = ExtResource("2_glbon")
+expand_margin_top = 22.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n56f"]
+texture = ExtResource("2_glbon")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
+texture = ExtResource("2_glbon")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlo4h"]
+texture = ExtResource("2_glbon")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti2cv"]
+texture = ExtResource("3_nlkkf")
+expand_margin_top = 22.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qe12f"]
+texture = ExtResource("3_nlkkf")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+texture = ExtResource("3_nlkkf")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("3_nlkkf")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7m5gv"]
+texture = ExtResource("4_qe12f")
+expand_margin_top = 22.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8qtwp"]
+texture = ExtResource("4_qe12f")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dy7ct"]
+texture = ExtResource("4_qe12f")
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0o4t1"]
+texture = ExtResource("4_qe12f")
+expand_margin_top = 22.0
+
+[node name="MainMenu" type="Control" unique_id=1825482001]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 444.0
+offset_top = 431.0
+offset_right = 694.0
+offset_bottom = 431.0
+script = ExtResource("1_jix8l")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1717962553]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -566.0
+offset_top = -430.0
+offset_right = 585.0
+offset_bottom = 215.0
+grow_horizontal = 2
+texture = ExtResource("2_nlkkf")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MenuContainer" type="VBoxContainer" parent="." unique_id=1667516270]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = -145.5
+offset_right = 125.0
+offset_bottom = 145.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 17
+
+[node name="Logo" type="TextureRect" parent="MenuContainer" unique_id=1125966386]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="MenuContainer" unique_id=2048194916]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_kto4x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3n56f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jix8l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xlo4h")
+
+[node name="SettingsButton" type="Button" parent="MenuContainer" unique_id=885747753]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ti2cv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_glbon")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="ExitButton" type="Button" parent="MenuContainer" unique_id=683198459]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_7m5gv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8qtwp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dy7ct")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_0o4t1")
+
+[connection signal="pressed" from="MenuContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MenuContainer/ExitButton" to="." method="_on_exit_button_pressed"]

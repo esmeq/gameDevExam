@@ -1,28 +1,116 @@
 [gd_scene format=3 uid="uid://cwyg8tj1xfno1"]
 
+[ext_resource type="Script" uid="uid://cxa4y1ndswqyf" path="res://login.gd" id="1_cau7c"]
+[ext_resource type="Texture2D" uid="uid://b3l0gmf5pvhki" path="res://addons/skybox_sampler/panoramas/12_moonlit_night.png" id="2_bvvwm"]
+[ext_resource type="Texture2D" uid="uid://dl3tv2o0bxb04" path="res://pulsante email.png" id="3_xlo4h"]
+[ext_resource type="Texture2D" uid="uid://bao50ektlts5t" path="res://pulsante password.png" id="4_bvvwm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3n56f"]
+content_margin_top = 26.0
+texture = ExtResource("3_xlo4h")
+expand_margin_top = 22.0
+expand_margin_bottom = 50.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlo4h"]
+content_margin_top = 26.0
+texture = ExtResource("4_bvvwm")
+expand_margin_top = 22.0
+expand_margin_bottom = 50.0
+
 [node name="Login" type="Control" unique_id=1987309629]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cau7c")
 
-[node name="LineEdit" type="LineEdit" parent="." unique_id=2059415425]
-layout_mode = 0
-offset_right = 154.0
-offset_bottom = 38.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1475232809]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -572.0
+offset_top = -323.0
+offset_right = 576.0
+offset_bottom = 314.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bvvwm")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="LineEdit2" type="LineEdit" parent="." unique_id=1240857360]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 40.0
-offset_right = 156.0
-offset_bottom = 78.0
+[node name="EmailInput" type="LineEdit" parent="." unique_id=2059415425]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -91.0
+offset_top = -105.0
+offset_right = 98.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_3n56f")
+placeholder_text = "Email"
+alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=812637318]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 91.0
-offset_right = 112.0
-offset_bottom = 128.0
+[node name="PasswordInput" type="LineEdit" parent="." unique_id=1240857360]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -91.0
+offset_right = 137.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xlo4h")
+placeholder_text = "Password"
+alignment = 1
+secret = true
+
+[node name="LogInButton" type="Button" parent="." unique_id=812637318]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = 11.0
+offset_right = 52.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "log in"
+
+[node name="SignUpButton" type="Button" parent="." unique_id=2040268238]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = 45.0
+offset_right = 52.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sign Up"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=1131908381]
+
+[connection signal="pressed" from="LogInButton" to="." method="_on_log_in_button_pressed"]
+[connection signal="pressed" from="SignUpButton" to="." method="_on_sign_up_button_pressed"]

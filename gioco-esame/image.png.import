@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqr7gvrfu6r4c"
-path="res://.godot/imported/14_supernova_remnant.png-d32ee9e216118940e2849bcddd8618b1.ctex"
+uid="uid://db617lream1wr"
+path="res://.godot/imported/image.png-2de165adb17dfebcee8a7cd6c9833936.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/skybox_sampler/panoramas/14_supernova_remnant.png"
-dest_files=["res://.godot/imported/14_supernova_remnant.png-d32ee9e216118940e2849bcddd8618b1.ctex"]
+source_file="res://image.png"
+dest_files=["res://.godot/imported/image.png-2de165adb17dfebcee8a7cd6c9833936.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

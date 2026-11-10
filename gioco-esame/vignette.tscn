@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dej1lfu1pl4d"]
+
+[ext_resource type="Texture2D" uid="uid://db617lream1wr" path="res://image.png" id="1_cj8j2"]
+[ext_resource type="Script" uid="uid://b5626glxcqkc4" path="res://vignette.gd" id="1_jkptn"]
+[ext_resource type="Texture2D" uid="uid://co8are1taqkxf" path="res://freccia.png" id="2_qc8b6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cj8j2"]
+texture = ExtResource("2_qc8b6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jr6mg"]
+texture = ExtResource("2_qc8b6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jkptn"]
+texture = ExtResource("2_qc8b6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vluhx"]
+texture = ExtResource("2_qc8b6")
+
+[node name="Vignette" type="Control" unique_id=1897591027]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jkptn")
+
+[node name="Glitch" type="ColorRect" parent="." unique_id=1475682470]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -575.0
+offset_top = -324.0
+offset_right = 579.0
+offset_bottom = 324.0
+color = Color(0, 0, 0, 1)
+
+[node name="Vignetta" type="TextureRect" parent="." unique_id=1079209796]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -323.0
+offset_right = 581.0
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cj8j2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Freccia" type="Button" parent="." unique_id=1517696881]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 454.0
+offset_top = 255.0
+offset_right = 553.0
+offset_bottom = 315.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_cj8j2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jr6mg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jkptn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vluhx")

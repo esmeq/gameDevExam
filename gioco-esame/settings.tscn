@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://dnpre0oahx31m"]
+
+[ext_resource type="Script" uid="uid://coq8o84n72b8i" path="res://settings.gd" id="1_x2hje"]
+[ext_resource type="Texture2D" uid="uid://cevqerku10n1" path="res://settings.jpg" id="2_nkug2"]
+[ext_resource type="Script" uid="uid://ceho61hnw1r4i" path="res://dynamic_led_slider.gd" id="3_3ykye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyu63"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irvbo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wowtj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnukr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftxyb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_enhmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12vrv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_blqgl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3k3lr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sw0re"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xpto1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_4oasm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e3nl3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rowkt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kto4x"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nbei4"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_pfixw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ti2cv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m5gv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hk2xl"]
+
+[node name="Settings" type="Control" unique_id=1094273215]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2hje")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=272546186]
+layout_mode = 0
+offset_right = 1171.0
+offset_bottom = 669.0
+texture = ExtResource("2_nkug2")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1853285718]
+unique_name_in_owner = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=393081048]
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 49.0
+
+[node name="MainPanel" type="Control" parent="CenterContainer" unique_id=821717594]
+layout_mode = 2
+
+[node name="LogOutButton" type="Button" parent="CenterContainer/MainPanel" unique_id=641135588]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 468.0
+offset_top = 425.0
+offset_right = 666.0
+offset_bottom = 468.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dyu63")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_irvbo")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wowtj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cnukr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ftxyb")
+
+[node name="BackButton" type="Button" parent="CenterContainer/MainPanel" unique_id=1066782228]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 469.0
+offset_top = 508.0
+offset_right = 662.0
+offset_bottom = 552.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_enhmd")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_12vrv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_blqgl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3k3lr")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sw0re")
+
+[node name="MusicRow" type="HBoxContainer" parent="CenterContainer/MainPanel" unique_id=1897225517]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 273.0
+offset_right = 796.0
+offset_bottom = 299.0
+
+[node name="Music" type="HSlider" parent="CenterContainer/MainPanel" unique_id=718114602]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 592.0
+offset_top = 273.0
+offset_right = 794.0
+offset_bottom = 302.0
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_xpto1")
+theme_override_icons/grabber_disabled = SubResource("PlaceholderTexture2D_4oasm")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_e3nl3")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_rowkt")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_kto4x")
+script = ExtResource("3_3ykye")
+
+[node name="BrightnessRow" type="HBoxContainer" parent="CenterContainer/MainPanel" unique_id=1602851098]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 346.0
+offset_right = 793.0
+offset_bottom = 373.0
+
+[node name="Brightness" type="HSlider" parent="CenterContainer/MainPanel" unique_id=1740431225]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 594.0
+offset_top = 346.0
+offset_right = 796.0
+offset_bottom = 375.0
+theme_override_icons/grabber = SubResource("PlaceholderTexture2D_nbei4")
+theme_override_icons/grabber_disabled = SubResource("PlaceholderTexture2D_pfixw")
+theme_override_styles/slider = SubResource("StyleBoxEmpty_ti2cv")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_7m5gv")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_hk2xl")
+script = ExtResource("3_3ykye")

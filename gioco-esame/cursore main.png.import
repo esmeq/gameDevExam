@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3l0gmf5pvhki"
-path="res://.godot/imported/12_moonlit_night.png-2e0ff4130f698a887e2de245b5d68ed6.ctex"
+uid="uid://b5shgea3vh1fn"
+path="res://.godot/imported/cursore main.png-644b4b562c5f67d9c8eec4a9240680b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/skybox_sampler/panoramas/12_moonlit_night.png"
-dest_files=["res://.godot/imported/12_moonlit_night.png-2e0ff4130f698a887e2de245b5d68ed6.ctex"]
+source_file="res://cursore main.png"
+dest_files=["res://.godot/imported/cursore main.png-644b4b562c5f67d9c8eec4a9240680b6.ctex"]
 
 [params]
 
@@ -23,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

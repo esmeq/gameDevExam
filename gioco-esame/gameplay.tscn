@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dvgsmmq20nv80"]
+
+[ext_resource type="Script" uid="uid://bfhttigxqd05u" path="res://gameplay.gd" id="1_ej4tk"]
+[ext_resource type="Texture2D" uid="uid://cdlv8nwumk1wi" path="res://romasfondo.png" id="2_oe8ih"]
+[ext_resource type="Script" uid="uid://bbxc2a1q1axo8" path="res://player.gd" id="3_oe8ih"]
+[ext_resource type="Texture2D" uid="uid://61ryhyo7iweg" path="res://posizioneup-removebg-preview.png" id="4_xuee5"]
+[ext_resource type="Texture2D" uid="uid://c4mmsotsaamo7" path="res://posizioneupleft-removebg-preview.png" id="5_0m7cd"]
+[ext_resource type="Texture2D" uid="uid://dd23uqsmd4qav" path="res://posizioneupright-removebg-preview.png" id="6_2ihbs"]
+[ext_resource type="Texture2D" uid="uid://051w422o67tf" path="res://posizioneleft-removebg-preview.png" id="7_1qy1k"]
+[ext_resource type="Texture2D" uid="uid://b8bhvlbjgha50" path="res://posizioneright-removebg-preview.png" id="8_3n40r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5x3x"]
+size = Vector2(808, 80)
+
+[node name="Gameplay" type="Node2D" unique_id=619410913]
+script = ExtResource("1_ej4tk")
+
+[node name="Environment" type="TextureRect" parent="." unique_id=1820791831]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+texture = ExtResource("2_oe8ih")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PlatformHitbox" type="StaticBody2D" parent="." unique_id=1187284157]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformHitbox" unique_id=1631119356]
+position = Vector2(587, 566)
+shape = SubResource("RectangleShape2D_w5x3x")
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=365218692]
+position = Vector2(587, 554)
+
+[node name="Targets" type="Node2D" parent="." unique_id=1984540343]
+position = Vector2(845, 174)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1044193429]
+position = Vector2(587, 556)
+script = ExtResource("3_oe8ih")
+tex_center = ExtResource("4_xuee5")
+tex_up = ExtResource("4_xuee5")
+tex_up_left = ExtResource("5_0m7cd")
+tex_up_right = ExtResource("6_2ihbs")
+tex_left = ExtResource("7_1qy1k")
+tex_right = ExtResource("8_3n40r")
+
+[node name="Sprite" type="Sprite2D" parent="Player" unique_id=1844714869]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=566794574]

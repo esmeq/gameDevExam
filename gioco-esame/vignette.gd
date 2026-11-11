@@ -36,4 +36,4 @@ func _ready():
 
 func _on_freccia_pressed():
 	print("Passaggio al gioco principale...")
-	# get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+	get_tree().change_scene_to_file("res://gameplay.tscn")
